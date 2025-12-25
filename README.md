@@ -1,19 +1,6 @@
 # University Admission Platform
 
 A modern web application to explore universities abroad and submit applications based on eligibility criteria like GPA and IELTS. Built with **Next.js**, **React**, **TailwindCSS**, and **Node.js/Express** with **MySQL** as the database.
-
----
-
-## Table of Contents
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [API Endpoints](#api-endpoints)
-- [Screenshots](#screenshots)
-- [License](#license)
-
 ---
 
 ## Features

@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import CompareModal from "./CompareModal"; 
 import UniversityCard from "../UniversityCard/UniversityCard";
+import CompareModal from "../CompareModal/CompareModal";
 
 const UniversityList = ({ universities }) => {
-  const [compareList, setCompareList] = useState([]); 
-  const [showCompare, setShowCompare] = useState(false); 
+  const [compareList, setCompareList] = useState([]);
+  const [showCompare, setShowCompare] = useState(false);
 
   //  Compare checkbox toggle logic
   const toggleCompare = (univ) => {

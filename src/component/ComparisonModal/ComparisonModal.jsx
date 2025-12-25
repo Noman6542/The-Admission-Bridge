@@ -1,14 +1,18 @@
 "use client";
-import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { XCircle } from 'lucide-react';
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { XCircle } from "lucide-react";
 
-const ComparisonModal = ({ showCompareModal, setShowCompareModal, compareList }) => {
+const ComparisonModal = ({
+  showCompareModal,
+  setShowCompareModal,
+  compareList,
+}) => {
   return (
     <AnimatePresence>
       {showCompareModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
@@ -24,10 +28,15 @@ const ComparisonModal = ({ showCompareModal, setShowCompareModal, compareList })
               <table className="w-full text-left">
                 <thead>
                   <tr>
-                    <th className="pb-6 text-gray-400 uppercase text-xs">University</th>
-                    {compareList.map(u => (
+                    <th className="pb-6 text-gray-400 uppercase text-xs">
+                      University
+                    </th>
+                    {compareList.map((u) => (
                       <th key={u.id} className="pb-6 px-4">
-                        <img src={u.image} className="w-16 h-16 rounded-xl object-cover mb-2" />
+                        <img
+                          src={u.image}
+                          className="w-16 h-16 rounded-xl object-cover mb-2"
+                        />
                         <p className="font-bold leading-tight">{u.name}</p>
                       </th>
                     ))}
@@ -35,20 +44,43 @@ const ComparisonModal = ({ showCompareModal, setShowCompareModal, compareList })
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   <tr>
-                    <td className="py-4 text-gray-500 font-medium">Annual Tuition</td>
-                    {compareList.map(u => <td key={u.id} className="py-4 px-4 font-bold text-indigo-600">${u.tuition.toLocaleString()}</td>)}
+                    <td className="py-4 text-gray-500 font-medium">
+                      Annual Tuition
+                    </td>
+                    {compareList.map((u) => (
+                      <td
+                        key={u.id}
+                        className="py-4 px-4 font-bold text-indigo-600"
+                      >
+                        ${u.tuition.toLocaleString()}
+                      </td>
+                    ))}
                   </tr>
                   <tr>
                     <td className="py-4 text-gray-500 font-medium">Min. GPA</td>
-                    {compareList.map(u => <td key={u.id} className="py-4 px-4 font-bold">{u.minGPA}</td>)}
+                    {compareList.map((u) => (
+                      <td key={u.id} className="py-4 px-4 font-bold">
+                        {u.minGPA}
+                      </td>
+                    ))}
                   </tr>
                   <tr>
-                    <td className="py-4 text-gray-500 font-medium">Min. IELTS</td>
-                    {compareList.map(u => <td key={u.id} className="py-4 px-4 font-bold">{u.minIELTS}</td>)}
+                    <td className="py-4 text-gray-500 font-medium">
+                      Min. IELTS
+                    </td>
+                    {compareList.map((u) => (
+                      <td key={u.id} className="py-4 px-4 font-bold">
+                        {u.minIELTS}
+                      </td>
+                    ))}
                   </tr>
                   <tr>
                     <td className="py-4 text-gray-500 font-medium">Country</td>
-                    {compareList.map(u => <td key={u.id} className="py-4 px-4">{u.country}</td>)}
+                    {compareList.map((u) => (
+                      <td key={u.id} className="py-4 px-4">
+                        {u.country}
+                      </td>
+                    ))}
                   </tr>
                 </tbody>
               </table>

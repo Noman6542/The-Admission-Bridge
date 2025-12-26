@@ -14,7 +14,7 @@ const ApplyForm = ({ university }) => {
 
   const submitApplication = async () => {
     try {
-      const res = await fetch("https://the-admission-server.vercel.app/applications", {
+      const res = await fetch("https://the-admission-server.vercel.app/api/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

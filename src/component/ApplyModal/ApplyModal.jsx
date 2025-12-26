@@ -17,7 +17,7 @@ const ApplyModal = ({ isApplying, setIsApplying, userGPA, userIELTS }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://the-admission-server.vercel.app/api/applications", {
+      const res = await axios.post("http://localhost:4000/api/applications", {
         ...formData,
         universityId: isApplying.id,
         gpa: userGPA,

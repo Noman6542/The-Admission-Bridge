@@ -26,7 +26,7 @@ const ApplyForm = ({ university }) => {
       const data = await res.json();
       if (res.ok) {
         toast.success(data.message);
-        setSubmitted(true); // ✅ button hide
+        setSubmitted(true); 
       } else {
         toast.error(data.error || "Submission failed");
       }

@@ -19,7 +19,7 @@ const App = () => {
   const [userIELTS, setUserIELTS] = useState("");
 
   const fetchUniversities = async () => {
-    const { data } = await axios.get("http://localhost:4000/api/universities", {
+    const { data } = await axios.get("https://the-admission-server-production.up.railway.app/api/universities", {
       params: {
         search: searchTerm,
         country: selectedCountry,
